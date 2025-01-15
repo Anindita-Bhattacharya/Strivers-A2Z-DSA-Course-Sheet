@@ -1,0 +1,21 @@
+import java.util.HashSet;
+
+public class Solution {
+    public static int removeDuplicates(int[] arr,int n) {
+        // Write your code here.
+        HashSet<Integer> hp=new HashSet<Integer>();
+        int ans=0;
+        int j=0;
+        for(int i=0;i<n;i++)
+        {
+            hp.add(arr[i]);
+        }
+        for(int data : hp)
+        {
+        arr[j]=data;
+        j++;
+        }
+        return j;
+        
+    }
+}
